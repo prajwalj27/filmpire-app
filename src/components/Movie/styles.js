@@ -2,7 +2,10 @@ import { makeStyles } from '@mui/styles';
 
 export default makeStyles((theme) => ({
   movie: {
-    padding: '10px',
+    transform: 'scale(0.85)',
+    [theme.breakpoints.down('sm')]: {
+      transform: 'scale(0.95)',
+    },
   },
   links: {
     alignItems: 'center',
