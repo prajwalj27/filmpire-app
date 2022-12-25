@@ -56,8 +56,6 @@ function MovieInformation() {
   const addToFavorites = () => {};
   const addToWatchlist = () => {};
 
-  console.log(recommendations);
-
   if (isFetching) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
@@ -238,7 +236,7 @@ function MovieInformation() {
         </Typography>
         {/* Loop through the recommended movies... */}
         {recommendations?.results.length ? (
-          <MovieList data={recommendations} numberOfMovies={12} />
+          <MovieList movies={recommendations} numberOfMovies={12} />
         ) : (
           <Box>Sorry, nothing was found!</Box>
         )}
